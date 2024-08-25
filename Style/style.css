@@ -1,0 +1,182 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Variáveis de CSS */
+:root {
+    --cor-primaria: #000000;
+    --cor-secundária: #f6f6f6;
+    --cor-terciaria: #FD0054;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundária);
+    font-family: var(--fonte-secundaria);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    padding: 20px 3%; /* Espaço interno ao redor do cabeçalho */
+    display: flex;
+    align-items: center;
+    height: auto; /* Ajusta a altura automaticamente com base no padding */
+    border-bottom: 2px solid var(--cor-terciaria); /* Adiciona uma borda inferior para visibilidade */
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mantém os itens alinhados à esquerda dentro do cabeçalho */
+    width: 100%;
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--cor-secundária);
+    margin: 0 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-terciaria);
+}
+
+/* Estilos de Conteúdo */
+.apresentacao {
+    padding: 6% 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+}
+
+.foto {
+    width: 300px;
+    border-radius: 5%;
+    max-width: 100%; /* Garante que a imagem não exceda o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 100%; /* Garante que o conteúdo não exceda a largura disponível */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34.5px;
+    width: 100%;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 378px; /* Limita a largura máxima */
+    text-align: center;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundária);
+    font-weight: 600;
+}
+
+.apresentacao__links__link:hover {
+    background-color: #272727;
+}
+
+/* Rodapé */
+.rodape {
+    color: var(--cor-secundária);
+    background-color: var(--cor-terciaria);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    width: 100%;
+}
+
+.certificado {
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--cor-secundária);
+}
+
+.certificado:hover {
+    color: var(--cor-terciaria);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .cabecalho__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao {
+        padding: 6% 10%; /* Ajusta o padding para telas menores */
+        flex-direction: column; /* Se eu quiser a img para cima column-reverse; */
+    }
+
+    .apresentacao__conteudo {
+        width: 100%; /* Faz o conteúdo ocupar a largura total */
+        padding: 1em;
+    }
+
+    .apresentacao__links__link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .apresentacao__conteudo__titulo {
+        font-size: 1.75rem; /* Reduz o tamanho da fonte em telas muito pequenas */
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 1.2rem;
+    }
+}
